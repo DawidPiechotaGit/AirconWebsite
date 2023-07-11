@@ -1,3 +1,9 @@
+import { Navigation } from "../components/navigation";
+
 export const Home = () => {
-  return <></>;
+  return (
+    <>
+      <Navigation />
+    </>
+  );
 };
