@@ -20,7 +20,7 @@ const TitleTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 15%;
+  padding-top: 12%;
   gap: 5px;
   margin-left: 10%;
 `;

@@ -58,6 +58,14 @@ const NavLinks = styled.p`
   }
 `;
 
+const NavLogo = styled.img`
+  &:hover {
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+  }
+`;
+
 export const Navigation = () => {
   const navigate = useNavigate();
   return (
@@ -65,11 +73,11 @@ export const Navigation = () => {
       <ContactContainer>
         <ContactInner>
           <div>
-            <img
+            <NavLogo
               onClick={() => navigate("/home")}
               style={{ height: "50px" }}
               src={Logo}
-            ></img>
+            ></NavLogo>
           </div>
           <ContactInfo>
             <p>dawidpiechota@gmail.com</p>
