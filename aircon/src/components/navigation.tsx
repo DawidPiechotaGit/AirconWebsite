@@ -26,8 +26,12 @@ export const Navigation = () => {
     <>
       <NavContainer className="nav-container">
         <NavLinksContainer className="nav-links-container">
-          <img style={{ height: "50px" }} src={Logo}></img>
-          <NavLinks onClick={() => navigate("/home")}>Home</NavLinks>
+          <img
+            onClick={() => navigate("/home")}
+            style={{ height: "50px" }}
+            src={Logo}
+          ></img>
+          {/* <NavLinks onClick={() => navigate("/home")}>Home</NavLinks> */}
           <NavLinks onClick={() => navigate("/aboutus")}>About Us</NavLinks>
           <NavLinks onClick={() => navigate("/showcase")}>Our Work</NavLinks>
           <NavLinks onClick={() => navigate("/stock")}>Stock</NavLinks>
