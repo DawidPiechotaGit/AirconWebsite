@@ -52,13 +52,52 @@ const ImageRouletteDiv = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 15px;
+  gap: 10px;
+`;
+
+const ImageRouletteContainer = styled.div`
+  background-color: #a3b18a;
+  position: relative;
+  width: 50%;
+  border-radius: 4px;
+  &:hover {
+    z-index: 0;
+    cursor: pointer;
+    transition-duration: 0.75s;
+    transform: scale(1.01);
+    filter: blur(2px);
+  }
 `;
 
 const ImageRoulette = styled.img`
+  display: block;
   height: 400px;
-  max-width: 550px;
+  max-width: 100%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 4px;
+`;
+
+const ImageHoverDiv = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+`;
+
+const ImageHoverText = styled.p`
+  font-size: 30px;
+  font-weight: 500;
+  color: #344e41;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 `;
 
 export const Home = () => {
@@ -77,9 +116,24 @@ export const Home = () => {
           </TitleTextContainer>
         </TopBackgroundDiv>
         <ImageRouletteDiv>
-          <ImageRoulette src={Roul1}></ImageRoulette>
-          <ImageRoulette src={Roul2}></ImageRoulette>
-          <ImageRoulette src={Roul3}></ImageRoulette>
+          <ImageRouletteContainer>
+            <ImageRoulette src={Roul1} />
+            <ImageHoverDiv>
+              <ImageHoverText>Our Service</ImageHoverText>
+            </ImageHoverDiv>
+          </ImageRouletteContainer>
+          <ImageRouletteContainer>
+            <ImageRoulette src={Roul2} />
+            <ImageHoverDiv>
+              <ImageHoverText>Our Work</ImageHoverText>
+            </ImageHoverDiv>
+          </ImageRouletteContainer>
+          <ImageRouletteContainer>
+            <ImageRoulette src={Roul3} />
+            <ImageHoverDiv>
+              <ImageHoverText>Our Product</ImageHoverText>
+            </ImageHoverDiv>
+          </ImageRouletteContainer>
         </ImageRouletteDiv>
       </div>
     </>
