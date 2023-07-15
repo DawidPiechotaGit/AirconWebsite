@@ -100,6 +100,50 @@ const ImageHoverText = styled.p`
   text-align: center;
 `;
 
+const FormWrapper = styled.div`
+  height: 600px;
+  width: 100%;
+  background-color: #588157;
+`;
+
+const FormContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+const FormInputContainer = styled.div`
+  width: 200px;
+`;
+
+const FormInput = styled.input`
+  border-radius: 4px;
+  border: transparent;
+  padding: 20px;
+`;
+
+const FormTextArea = styled.textarea`
+  border-radius: 4px;
+  border: transparent;
+  height: 100px;
+  width: 600px;
+  width: 50px;
+`;
+
+const FormButton = styled.button`
+  border-radius: 4px;
+  border: transparent;
+  padding: 20px;
+`;
+
 export const Home = () => {
   return (
     <>
@@ -135,6 +179,22 @@ export const Home = () => {
             </ImageHoverDiv>
           </ImageRouletteContainer>
         </ImageRouletteDiv>
+        <FormWrapper>
+          <FormContainer>
+            <Form>
+              <FormInputContainer>
+                <FormInput type="text" placeholder="First Name"></FormInput>
+                <FormInput type="text" placeholder="Surname"></FormInput>
+              </FormInputContainer>
+              <FormTextArea
+                cols={50}
+                rows={10}
+                placeholder="Details"
+              ></FormTextArea>
+              <FormButton type="submit">Send</FormButton>
+            </Form>
+          </FormContainer>
+        </FormWrapper>
       </div>
     </>
   );
